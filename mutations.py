@@ -12,5 +12,5 @@ class Mutation:
         return await save_user(name, email, password)
 
     @strawberry.mutation
-    async def create_note(self, title: str, description: str) -> NoteType:
-        return await save_note(title, description)
+    async def create_note(self, user_id: str, title: str, description: str) -> NoteType:
+        return await save_note(user_id, title, description)

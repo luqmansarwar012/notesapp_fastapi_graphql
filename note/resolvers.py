@@ -7,11 +7,18 @@ from bson import ObjectId
 
 
 async def get_all_notes() -> List[NoteType]:
-    notes = await Note.find_all().to_list()
+    notes = await Note.find_all(fetch_links=True).to_list()
     return [
-        NoteType(id=str(note.id), title=note.title, description=note.description)
+        NoteType(
+            id=str(note.id),
+            title=note.title,
+            description=note.description,
+            user=UserType(
+                id=str(note.user.id), name=note.user.name, email=note.user.email
+            ),
+        )
         for note in notes
-    ] or [NoteType(id="dummy id", title="dummy title", description="dummy description")]
+    ]
 
 
 async def save_note(user_id: str, title: str, description: str) -> NoteType:
