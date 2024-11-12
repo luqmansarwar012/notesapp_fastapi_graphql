@@ -1,9 +1,9 @@
 from config.database import initiate_database
 from strawberry.fastapi import GraphQLRouter
 from contextlib import asynccontextmanager
-from mutations import Mutation
+from mutation import Mutation
 from fastapi import FastAPI
-from queries import Query
+from query import Query
 import strawberry
 
 
