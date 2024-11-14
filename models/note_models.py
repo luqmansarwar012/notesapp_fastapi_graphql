@@ -1,5 +1,5 @@
 from beanie import Document, Link
-from user.models import User
+from models.user_models import User
 
 
 class Note(Document):

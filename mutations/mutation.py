@@ -1,5 +1,5 @@
-from user.mutations import UserMutation
-from note.mutations import NoteMutation
+from mutations.user_mutations import UserMutation
+from mutations.note_mutations import NoteMutation
 import strawberry
 
 

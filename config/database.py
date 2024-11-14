@@ -1,8 +1,8 @@
+from constants.database_constants import MONGODB_URI, DATABASE_NAME
 from motor.motor_asyncio import AsyncIOMotorClient
-from .constants import MONGODB_URI, DATABASE_NAME
+from models.user_models import User
+from models.note_models import Note
 from beanie import init_beanie
-from user.models import User
-from note.models import Note
 from .logger import logger
 
 

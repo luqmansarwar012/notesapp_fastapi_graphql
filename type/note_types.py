@@ -1,4 +1,4 @@
-from user.types import UserType
+from type.user_typess import UserType
 import strawberry
 
 

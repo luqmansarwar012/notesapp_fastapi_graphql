@@ -1,4 +1,4 @@
-from .env import get_env_variable
+from ..config.env import get_env_variable
 
 
 MONGODB_URI = get_env_variable("MONGODB_URI")
